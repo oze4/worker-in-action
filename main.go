@@ -1,20 +1,20 @@
 package main
 
 import (
-    "github.com/oze4/worker"
+	"github.com/oze4/worker"
 )
 
 func main() {
-    jobs := []worker.Job{
-        AddedByUser{name: "1"},
-        AddedByUser{name: "2"},
-        AddedByUser{name: "3"},
-        AddedByUser{name: "4"},
-        AddedByUser{name: "5"},
-        AddedByUser{name: "6"},
-    }
-    
-    worker.Do(jobs, 5)
+	jobs := []worker.Job{
+		AddedByUser{name: "1"},
+		AddedByUser{name: "2"},
+		AddedByUser{name: "3"},
+		AddedByUser{name: "4"},
+		AddedByUser{name: "5"},
+		AddedByUser{name: "6"},
+	}
+
+	worker.Do(jobs, 5)
 }
 
 type AddedByUser struct {
